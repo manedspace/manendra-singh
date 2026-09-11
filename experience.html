@@ -3,149 +3,2096 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experience — Manendra Kumar Singh, Ph.D</title>
+
+<title>Experience & Service — Manendra Kumar Singh, Ph.D.</title>
+
+<meta name="description"
+content="Academic experience, education, employment, awards, research projects, supervision, professional service, invited lectures, conferences, seminars and professional development of Dr. Manendra Kumar Singh.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+rel="stylesheet">
+
 <link rel="stylesheet" href="style.css">
+
+
+<style>
+
+/* =========================================================
+   EXPERIENCE PAGE
+   ========================================================= */
+
+.experience-page {
+  --accent: #702111;
+  --accent-dark: #54170d;
+  --accent-light: rgba(112,33,17,.08);
+  --border: rgba(112,33,17,.12);
+  --muted: #6c6c6c;
+  --card: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.experience-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 25px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(112,33,17,.10),
+      rgba(112,33,17,.025)
+    );
+  border-radius: 0 0 30px 30px;
+}
+
+.experience-hero::before {
+  content: "🎓";
+  position: absolute;
+  right: 5%;
+  top: -25px;
+  font-size: 13rem;
+  opacity: .035;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.experience-hero .wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.experience-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 15px;
+  margin-bottom: 14px;
+  border-radius: 30px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: .86rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.experience-hero h1 {
+  margin: 0 0 15px;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.08;
+}
+
+.experience-hero .lede {
+  max-width: 900px;
+  margin: 0;
+  color: #555;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   MAIN WRAPPER
+   ========================================================= */
+
+.experience-page main {
+  padding-bottom: 70px;
+}
+
+.experience-page main > .wrap {
+  width: min(1150px, 92%);
+  margin: auto;
+}
+
+
+/* =========================================================
+   QUICK PROFILE CARDS
+   ========================================================= */
+
+.profile-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 45px 0 60px;
+}
+
+.profile-card {
+  position: relative;
+  padding: 24px 18px;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.055);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 32px rgba(0,0,0,.10);
+}
+
+.profile-icon {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 2.3rem;
+}
+
+.profile-card strong {
+  display: block;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+  font-size: 1.55rem;
+}
+
+.profile-card span {
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.experience-page section {
+  margin-bottom: 62px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 28px;
+  padding-bottom: 17px;
+  border-bottom: 2px solid var(--border);
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 15px;
+  background: var(--accent-light);
+  font-size: 1.9rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.section-heading p {
+  margin: 4px 0 0;
+  color: #777;
+  font-size: .92rem;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 5px 0 5px 25px;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: rgba(112,33,17,.16);
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 24px;
+  padding: 22px 24px 22px 28px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.045);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.timeline li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline li:hover {
+  transform: translateX(4px);
+  box-shadow: 0 11px 27px rgba(0,0,0,.08);
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 29px;
+  width: 13px;
+  height: 13px;
+  background: var(--accent);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px rgba(112,33,17,.20);
+}
+
+.tl-year {
+  display: inline-block;
+  margin-bottom: 7px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.tl-title {
+  color: #292929;
+  font-family: "Source Serif 4", serif;
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+
+.tl-detail {
+  margin-top: 6px;
+  color: #666;
+  line-height: 1.7;
+  font-size: .94rem;
+}
+
+
+/* =========================================================
+   AWARDS
+   ========================================================= */
+
+.awards-grid {
+  display: grid;
+  gap: 17px;
+}
+
+.award-card {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 18px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.045);
+}
+
+.award-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  background: var(--accent-light);
+  font-size: 1.9rem;
+}
+
+.award-card h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.award-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+  font-size: .94rem;
+}
+
+
+/* =========================================================
+   DETAILS / ACCORDION
+   ========================================================= */
+
+.simple {
+  margin-bottom: 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 0 5px 17px rgba(0,0,0,.04);
+  overflow: hidden;
+}
+
+.simple summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 21px;
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 700;
+  list-style: none;
+}
+
+.simple summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 1.2rem;
+  transition: transform .25s ease;
+}
+
+.simple[open] .summary-toggle {
+  transform: rotate(45deg);
+}
+
+.simple ul {
+  margin: 0;
+  padding: 0 24px 22px 44px;
+}
+
+.simple li {
+  margin-bottom: 11px;
+  color: #555;
+  line-height: 1.7;
+  font-size: .94rem;
+}
+
+.simple li:last-child {
+  margin-bottom: 0;
+}
+
+.simple li::marker {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   MEMBERSHIP CARDS
+   ========================================================= */
+
+.membership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.membership-card {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.045);
+}
+
+.membership-card .membership-icon {
+  font-size: 2rem;
+}
+
+.membership-card h3 {
+  margin: 10px 0 5px;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+}
+
+.membership-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESEARCH & SUPERVISION
+   ========================================================= */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  padding: 24px 15px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.045);
+}
+
+.stat-card b {
+  display: block;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+  font-size: 1.6rem;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 4px;
+  color: #6c6c6c;
+  font-size: .84rem;
+}
+
+.project-card {
+  margin-top: 22px;
+  padding: 25px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(112,33,17,.07),
+      rgba(112,33,17,.015)
+    );
+  border: 1px solid var(--border);
+  border-radius: 17px;
+}
+
+.project-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--accent);
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 4px 0 9px;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CONFERENCE / PRESENTATION CARDS
+   ========================================================= */
+
+.presentation-list {
+  display: grid;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.presentation-list li {
+  position: relative;
+  padding: 20px 22px 20px 62px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.045);
+  color: #505050;
+  line-height: 1.7;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.presentation-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 27px rgba(0,0,0,.08);
+}
+
+.presentation-list li::before {
+  content: "🎤";
+  position: absolute;
+  left: 17px;
+  top: 19px;
+  font-size: 1.55rem;
+}
+
+.presentation-list strong {
+  color: var(--accent);
+}
+
+.presentation-list em {
+  color: #333;
+}
+
+.presentation-year {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INTERNATIONAL SECTION
+   ========================================================= */
+
+.international-section {
+  margin-top: 5px;
+}
+
+.international-section .section-icon {
+  background: rgba(70,52,120,.09);
+}
+
+.international-section .section-heading h2 {
+  color: #4b367c;
+}
+
+.international-section .presentation-list li {
+  border-left-color: #4b367c;
+}
+
+.international-section .presentation-list li::before {
+  content: "🌍";
+}
+
+.international-section .presentation-year {
+  color: #4b367c;
+  background: rgba(75,54,124,.09);
+}
+
+
+/* =========================================================
+   NATIONAL SECTION
+   ========================================================= */
+
+.national-section .presentation-list li::before {
+  content: "🇮🇳";
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.experience-cta {
+  padding: 38px 28px;
+  text-align: center;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(112,33,17,.09),
+      rgba(112,33,17,.025)
+    );
+  border: 1px solid var(--border);
+  border-radius: 22px;
+}
+
+.experience-cta .cta-icon {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 2.5rem;
+}
+
+.experience-cta h2 {
+  margin: 0 0 9px;
+  color: var(--accent);
+  font-family: "Source Serif 4", serif;
+}
+
+.experience-cta p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.experience-cta a {
+  display: inline-block;
+  padding: 11px 22px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.experience-cta a:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .profile-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .experience-hero {
+    padding: 55px 20px;
+  }
+
+  .experience-page main > .wrap {
+    width: 94%;
+  }
+
+  .profile-overview,
+  .membership-grid,
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-icon {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline li {
+    padding: 19px;
+  }
+
+  .timeline li::before {
+    left: -20px;
+  }
+
+  .presentation-list li {
+    padding-left: 55px;
+  }
+
+  .presentation-list li::before {
+    left: 15px;
+  }
+
+  .award-card {
+    grid-template-columns: 1fr;
+  }
+
+  .award-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+</style>
 </head>
+
+
 <body data-page="experience">
+
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
 
 <div id="site-nav" class="site-nav"></div>
 
-<header class="page-head">
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<header class="experience-hero">
+
   <div class="wrap">
-    <p class="page-kicker">Career record</p>
-    <h1>Experience &amp; service</h1>
-    <p class="lede">Education, positions held, awards, and the administrative and committee work that goes alongside research and teaching.</p>
+
+    <p class="experience-kicker">
+      🎓 Academic Career Record
+    </p>
+
+    <h1>Experience &amp; Service</h1>
+
+    <p class="lede">
+      A comprehensive record of academic qualifications, professional
+      experience, research supervision, awards, institutional service,
+      conference participation, invited lectures, and continuing
+      professional development.
+    </p>
+
   </div>
+
 </header>
 
-<main>
-  <div class="wrap">
 
-    <section style="padding-top:48px;">
+<main class="experience-page">
+
+<div class="wrap">
+
+
+<!-- =========================================================
+     PROFILE OVERVIEW
+     ========================================================= -->
+
+<section class="profile-overview">
+
+  <div class="profile-card">
+    <span class="profile-icon">🎓</span>
+    <strong>Ph.D.</strong>
+    <span>Library &amp; Information Science</span>
+  </div>
+
+  <div class="profile-card">
+    <span class="profile-icon">🏛️</span>
+    <strong>2019–Present</strong>
+    <span>Academic Career</span>
+  </div>
+
+  <div class="profile-card">
+    <span class="profile-icon">🏆</span>
+    <strong>Best Paper</strong>
+    <span>ICAL 2025</span>
+  </div>
+
+  <div class="profile-card">
+    <span class="profile-icon">🔬</span>
+    <strong>Research</strong>
+    <span>Teaching &amp; Supervision</span>
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EDUCATION
+     ========================================================= -->
+
+<section>
+
+  <div class="section-heading">
+
+    <div class="section-icon">🎓</div>
+
+    <div>
       <h2>Education</h2>
-      <ul class="timeline">
-        <li><span class="tl-year">2019</span><div class="tl-title">Ph.D., Library &amp; Information Science</div><div class="tl-detail">Banaras Hindu University, Varanasi. Thesis: "Literature in Biotechnology among BRICS Countries during 1988–2017: A Scientometrics Study."</div></li>
-        <li><span class="tl-year">2012</span><div class="tl-title">UGC NET/JRF — Library &amp; Information Science</div></li>
-        <li><span class="tl-year">2012</span><div class="tl-title">MLIS — 73.31%</div><div class="tl-detail">Banaras Hindu University, Varanasi.</div></li>
-        <li><span class="tl-year">2007</span><div class="tl-title">UGC NET — History</div></li>
-        <li><span class="tl-year">2007</span><div class="tl-title">MA (History) — 73.35%</div><div class="tl-detail">Banaras Hindu University, Varanasi.</div></li>
-        <li><span class="tl-year">2003</span><div class="tl-title">BA (Hons.) History — 57.8%</div><div class="tl-detail">MGKV, Varanasi.</div></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Employment</h2>
-      <ul class="timeline">
-        <li><span class="tl-year">2025 — present</span><div class="tl-title">Assistant Professor (Level 11)</div><div class="tl-detail">Department of Library and Information Science, Mizoram University, Aizawl.</div></li>
-        <li><span class="tl-year">2021 — 2025</span><div class="tl-title">Assistant Professor</div><div class="tl-detail">Department of Library and Information Science, Mizoram University, Aizawl.</div></li>
-        <li><span class="tl-year">2020 — 2021</span><div class="tl-title">Senior Librarian</div><div class="tl-detail">Heritage Institute of Medical Sciences, Varanasi.</div></li>
-        <li><span class="tl-year">2019 — 2020</span><div class="tl-title">Assistant Professor</div><div class="tl-detail">Department of Library and Information Science, ICFAI University, Tripura. Also served as Coordinator of the department (Jan–Aug 2020).</div></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Awards &amp; distinctions</h2>
-      <ol class="numbered-list">
-        <li><b>Best Paper Award, ICAL 2025</b> — "Evolution of Research Themes in LIS in India: A Topic Modeling and Bibliometric Approach," 8th International Conference of Asian Libraries, Gautam Buddha University, April 2025.</li>
-        <li><b>UGC Senior Research Fellow (SRF)</b> — March 2016 to January 2019, Library &amp; Information Science.</li>
-        <li><b>UGC Junior Research Fellow (JRF)</b> — 2014–2016; qualified UGC-JRF (Dec 2012) in Library &amp; Information Science.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>Service &amp; committees</h2>
-      <details class="simple" open>
-        <summary>Academic &amp; administrative committees <span class="summary-toggle">＋</span></summary>
-        <ul>
-          <li><b>Coordinator (LIS), NEP 2020</b> — May 2023 to Feb 2025.</li>
-          <li><b>Member, Board of School (BoS)</b>, Dept. of Library &amp; Information Science, Mizoram University — Sept 2021 to date.</li>
-          <li><b>Tour In-charge, Curriculum Stipulated Study Tour (CSST) 2022</b> — MLISc 4th Semester, Feb 2022.</li>
-          <li><b>Escort Teacher, CSST 2023</b> — MLISc 4th Semester, Feb 2023.</li>
-          <li><b>Tour In-charge, CSST 2024</b> — MLISc 4th Semester, Feb–Mar 2024.</li>
-          <li><b>Tour In-charge, CSST 2025</b> — MLISc 4th Semester, Feb 2025.</li>
-          <li><b>Tour In-charge, CSST 2025–26</b> — MLISc 4th Semester, Feb–Mar 2026.</li>
-          <li><b>Member, Editorial Board</b> — "National Education Policy 2020: A Forward-Looking Vision for LIS Education and Services," DLIS, Mizoram University, Mar 2023.</li>
-          <li><b>Coordinator/Convener, Librarians' Day</b> — DLIS, Mizoram University, 2021 and 2022.</li>
-          <li><b>Coordinator, Librarians' Day</b> — DLIS &amp; Central Library, Mizoram University, 2023 and 2024.</li>
-          <li><b>Ph.D. Admission Coordinator</b> — Academic years 2023–24, 2024–25, 2025–26, and 2026–27.</li>
-        </ul>
-      </details>
-      <details class="simple">
-        <summary>Memberships in professional bodies <span class="summary-toggle">＋</span></summary>
-        <ul>
-          <li><b>Indian Library Association (ILA)</b>, New Delhi — Life Member.</li>
-          <li><b>Association for Information Science and Technology (ASIS&amp;T)</b> — Annual Member, Tier 2 Developing Nation Professional Frequency.</li>
-        </ul>
-      </details>
-    </section>
-
-    <section>
-      <h2>Research projects &amp; supervision</h2>
-      <div class="stat-grid">
-        <div class="stat-card"><b>7 yrs 1 mo</b><span>Research experience</span></div>
-        <div class="stat-card"><b>7 yrs 1 mo</b><span>Teaching experience</span></div>
-        <div class="stat-card"><b>3 / 4</b><span>Ph.D. awarded / ongoing</span></div>
-        <div class="stat-card"><b>15 / 3</b><span>PG dissertations awarded / ongoing</span></div>
-      </div>
-      <p style="margin-top:20px; font-size:.95rem;">
-        <b style="color:var(--ink);">Principal Investigator</b>, Mizoram University-funded research project —
-        "Community Practices for Knowledge Transfer through the Generations among the Lushai Tribe of
-        Mizoram" (completed).
-      </p>
-      <p style="font-size:.92rem;">Full list of current and past Ph.D. scholars, with links to their own research profiles, is on the <a href="scholars.html">Scholars page →</a></p>
-    </section>
-
-    <section>
-      <h2>Invited talks &amp; professional development</h2>
-      <details class="simple" open>
-        <summary>Invited lectures &amp; chaired sessions <span class="summary-toggle">＋</span></summary>
-        <ul>
-          <li><b>Chaired a technical session</b> — National seminar on Integration Through Cultural Exchange, Dept. of Mass Communication, Mizoram University, May 2023.</li>
-          <li><b>Invited lecture</b> — "Role of the Public Library for National Integration through Cultural Exchange between North-East Region and rest of the Nation," same seminar, May 2023.</li>
-          <li><b>Lecture</b> — National Librarian Day, DLIS &amp; Central Library, Mizoram University, Aug 2023.</li>
-          <li><b>Keynote lecture</b> — "A Theoretical Outlook on DSpace Institutional Repository Software," National Workshop on Automation and Digitization for Academic and Special Libraries, Govt. Hrangbana College with INFLIBNET, Sept 2023.</li>
-          <li><b>Keynote lecture</b> — "Reimagining Academic Libraries through Artificial Intelligence: Tools, Trends, and Challenges," Gangadhar Meher University, Odisha, Mar 2026.</li>
-          <li><b>Chaired a technical session</b> — National seminar on Empowering Communities, User-Centric Library Services for Advancing SDGs, Mizoram Central Library, Mar 2025.</li>
-          <li><b>Lecture</b> — "Research Environment in India and Role of Academic Library," Central University of South Bihar, Mar 2026.</li>
-        </ul>
-      </details>
-      <details class="simple">
-        <summary>Papers presented at seminars &amp; symposiums <span class="summary-toggle">＋</span></summary>
-        <ul>
-          <li>Digital India and Library Professionals — National Seminar on Librarianship in the 21st Century, BHU, Feb 2016.</li>
-          <li>Role of Digital India Project in Community Information Service — National Conference on Conceptualizing the Social Responsibilities of Libraries, BHU, Mar 2017.</li>
-          <li>Use of Open-Source Learning Management System in Indian Public Libraries — BHU, Nov 2017.</li>
-          <li>Kumar Sumit &amp; <b>Manendra Kumar Singh</b>, "Beyond Vocabulary: Reclaiming Subject Access for Indigenous and Minority Knowledge Communities" — IFLA WLIC, Busan, South Korea, Aug 2026.</li>
-          <li>Kumar Sumit &amp; <b>Manendra Kumar Singh</b>, "Beyond Publication Growth: Measuring Semantic Maturity in Scholarly Topics" — SIG MET-STI Symposium, 89th ASIS&amp;T Annual Meeting, Bangkok, Nov 2026.</li>
-          <li>Kumar Sumit &amp; <b>Manendra Kumar Singh</b>, "Bridging Representation Gaps: Culturally Grounded Retrieval in Indigenous Multilingual OPACs" (poster) — 89th ASIS&amp;T Annual Meeting, Bangkok, Nov 2026.</li>
-        </ul>
-      </details>
-      <details class="simple">
-        <summary>Professional trainings &amp; workshops <span class="summary-toggle">＋</span></summary>
-        <ul>
-          <li>National Workshop on Library Automation (KOHA), Content Management (Joomla) &amp; Data Migration — Biju Patnaik Central Library, NIT Rourkela, May 2014.</li>
-          <li>Author Workshop — Springer Nature, BHU &amp; IIT (BHU) Varanasi, Oct 2016.</li>
-          <li>Literature Search: Tools &amp; Techniques — National Workshop on Research Methodology, Parshwanath Vidyapeeth, Varanasi, May 2017.</li>
-          <li>SAKSHAM-IT Champion Training Program — Microsoft, BHU, Dec 2017.</li>
-          <li>4-Week Induction/Orientation Program for Faculty — Teaching Learning Centre, Ramanujan College, University of Delhi, Jun–Jul 2021.</li>
-          <li>Refresher Course in Library and Information Science — UGC &amp; HRDC, Mizoram University, Oct 2022.</li>
-          <li>Hands-on Workshop on ICT (FDP) — NIEPA New Delhi with Dept. of Education, Mizoram University, Dec 2023.</li>
-          <li>DELNET IIT-Delhi Webinar — "CORAL: An Open Source Electronic Resource Management Software," Mar 2024.</li>
-          <li>DELNET IIT-Delhi Webinar — "Unleashing the Power of Data Analytics: Shaping the Future of an Innovative Research Ecosystem," Mar 2024.</li>
-          <li>NEP 2020 Orientation &amp; Sensitization Programme (MM-TTP) — Central University of Punjab, Bathinda, Aug 2024.</li>
-          <li>Workshop on Digital Media Text Analysis — DLIS &amp; Dept. of Mass Communication with DST-TEC, Mizoram University, Sept 2024.</li>
-        </ul>
-      </details>
-    </section>
+      <p>Academic qualifications and research training</p>
+    </div>
 
   </div>
+
+
+  <ul class="timeline">
+
+    <li>
+      <span class="tl-year">2019</span>
+
+      <div class="tl-title">
+        Ph.D., Library &amp; Information Science
+      </div>
+
+      <div class="tl-detail">
+        Banaras Hindu University, Varanasi.
+        Thesis:
+        <em>
+          "Literature in Biotechnology among BRICS Countries
+          during 1988–2017: A Scientometrics Study."
+        </em>
+      </div>
+    </li>
+
+
+    <li>
+      <span class="tl-year">2012</span>
+
+      <div class="tl-title">
+        UGC NET/JRF — Library &amp; Information Science
+      </div>
+    </li>
+
+
+    <li>
+      <span class="tl-year">2012</span>
+
+      <div class="tl-title">
+        MLIS — 73.31%
+      </div>
+
+      <div class="tl-detail">
+        Banaras Hindu University, Varanasi.
+      </div>
+    </li>
+
+
+    <li>
+      <span class="tl-year">2007</span>
+
+      <div class="tl-title">
+        UGC NET — History
+      </div>
+    </li>
+
+
+    <li>
+      <span class="tl-year">2007</span>
+
+      <div class="tl-title">
+        MA (History) — 73.35%
+      </div>
+
+      <div class="tl-detail">
+        Banaras Hindu University, Varanasi.
+      </div>
+    </li>
+
+
+    <li>
+      <span class="tl-year">2003</span>
+
+      <div class="tl-title">
+        BA (Hons.) History — 57.8%
+      </div>
+
+      <div class="tl-detail">
+        MGKV, Varanasi.
+      </div>
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================================================
+     EMPLOYMENT
+     ========================================================= -->
+
+<section>
+
+  <div class="section-heading">
+
+    <div class="section-icon">💼</div>
+
+    <div>
+      <h2>Employment</h2>
+      <p>Academic and professional positions held</p>
+    </div>
+
+  </div>
+
+
+  <ul class="timeline">
+
+    <li>
+
+      <span class="tl-year">2025 — Present</span>
+
+      <div class="tl-title">
+        Assistant Professor (Level 11)
+      </div>
+
+      <div class="tl-detail">
+        Department of Library and Information Science,
+        Mizoram University, Aizawl.
+      </div>
+
+    </li>
+
+
+    <li>
+
+      <span class="tl-year">2021 — 2025</span>
+
+      <div class="tl-title">
+        Assistant Professor
+      </div>
+
+      <div class="tl-detail">
+        Department of Library and Information Science,
+        Mizoram University, Aizawl.
+      </div>
+
+    </li>
+
+
+    <li>
+
+      <span class="tl-year">2020 — 2021</span>
+
+      <div class="tl-title">
+        Senior Librarian
+      </div>
+
+      <div class="tl-detail">
+        Heritage Institute of Medical Sciences, Varanasi.
+      </div>
+
+    </li>
+
+
+    <li>
+
+      <span class="tl-year">2019 — 2020</span>
+
+      <div class="tl-title">
+        Assistant Professor
+      </div>
+
+      <div class="tl-detail">
+        Department of Library and Information Science,
+        ICFAI University, Tripura.
+        Also served as Coordinator of the department
+        (Jan–Aug 2020).
+      </div>
+
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================================================
+     AWARDS
+     ========================================================= -->
+
+<section>
+
+  <div class="section-heading">
+
+    <div class="section-icon">🏆</div>
+
+    <div>
+      <h2>Awards &amp; Distinctions</h2>
+      <p>Academic recognition, fellowships and achievements</p>
+    </div>
+
+  </div>
+
+
+  <div class="awards-grid">
+
+    <div class="award-card">
+
+      <div class="award-icon">🥇</div>
+
+      <div>
+        <h3>Best Paper Award — ICAL 2025</h3>
+
+        <p>
+          <em>
+            "Evolution of Research Themes in LIS in India:
+            A Topic Modeling and Bibliometric Approach,"
+          </em>
+          8th International Conference of Asian Libraries,
+          Gautam Buddha University, April 2025.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="award-card">
+
+      <div class="award-icon">🔬</div>
+
+      <div>
+        <h3>UGC Senior Research Fellow (SRF)</h3>
+
+        <p>
+          March 2016 to January 2019,
+          Library &amp; Information Science.
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="award-card">
+
+      <div class="award-icon">🎓</div>
+
+      <div>
+        <h3>UGC Junior Research Fellow (JRF)</h3>
+
+        <p>
+          2014–2016; qualified UGC-JRF in December 2012
+          in Library &amp; Information Science.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICE & COMMITTEES
+     ========================================================= -->
+
+<section>
+
+  <div class="section-heading">
+
+    <div class="section-icon">🏛️</div>
+
+    <div>
+      <h2>Service &amp; Committees</h2>
+      <p>Academic administration and institutional responsibilities</p>
+    </div>
+
+  </div>
+
+
+  <details class="simple" open>
+
+    <summary>
+      Academic &amp; Administrative Committees
+      <span class="summary-toggle">＋</span>
+    </summary>
+
+    <ul>
+
+      <li>
+        <b>Coordinator (LIS), NEP 2020</b> —
+        May 2023 to Feb 2025.
+      </li>
+
+      <li>
+        <b>Member, Board of School (BoS)</b>,
+        Department of Library &amp; Information Science,
+        Mizoram University —
+        Sept 2021 to date.
+      </li>
+
+      <li>
+        <b>Tour In-charge, Curriculum Stipulated Study Tour
+        (CSST) 2022</b> —
+        MLISc 4th Semester, Feb 2022.
+      </li>
+
+      <li>
+        <b>Escort Teacher, CSST 2023</b> —
+        MLISc 4th Semester, Feb 2023.
+      </li>
+
+      <li>
+        <b>Tour In-charge, CSST 2024</b> —
+        MLISc 4th Semester, Feb–Mar 2024.
+      </li>
+
+      <li>
+        <b>Tour In-charge, CSST 2025</b> —
+        MLISc 4th Semester, Feb 2025.
+      </li>
+
+      <li>
+        <b>Tour In-charge, CSST 2025–26</b> —
+        MLISc 4th Semester, Feb–Mar 2026.
+      </li>
+
+      <li>
+        <b>Member, Editorial Board</b> —
+        <em>
+          "National Education Policy 2020:
+          A Forward-Looking Vision for LIS Education and Services,"
+        </em>
+        DLIS, Mizoram University, Mar 2023.
+      </li>
+
+      <li>
+        <b>Coordinator/Convener, Librarians' Day</b> —
+        DLIS, Mizoram University, 2021 and 2022.
+      </li>
+
+      <li>
+        <b>Coordinator, Librarians' Day</b> —
+        DLIS &amp; Central Library, Mizoram University,
+        2023 and 2024.
+      </li>
+
+      <li>
+        <b>Ph.D. Admission Coordinator</b> —
+        Academic years 2023–24, 2024–25,
+        2025–26, and 2026–27.
+      </li>
+
+    </ul>
+
+  </details>
+
+
+  <details class="simple">
+
+    <summary>
+      Memberships in Professional Bodies
+      <span class="summary-toggle">＋</span>
+    </summary>
+
+    <ul>
+
+      <li>
+        <b>Indian Library Association (ILA)</b>,
+        New Delhi — Life Member.
+      </li>
+
+      <li>
+        <b>Association for Information Science and Technology
+        (ASIS&amp;T)</b> —
+        Annual Member, Tier 2 Developing Nation
+        Professional Frequency.
+      </li>
+
+    </ul>
+
+  </details>
+
+</section>
+
+
+<!-- =========================================================
+     RESEARCH PROJECTS & SUPERVISION
+     ========================================================= -->
+
+<section>
+
+  <div class="section-heading">
+
+    <div class="section-icon">🔬</div>
+
+    <div>
+      <h2>Research Projects &amp; Supervision</h2>
+      <p>Research experience, supervision and funded research</p>
+    </div>
+
+  </div>
+
+
+  <div class="stat-grid">
+
+    <div class="stat-card">
+      <b>7 yrs 1 mo</b>
+      <span>Research experience</span>
+    </div>
+
+    <div class="stat-card">
+      <b>7 yrs 1 mo</b>
+      <span>Teaching experience</span>
+    </div>
+
+    <div class="stat-card">
+      <b>3 / 4</b>
+      <span>Ph.D. awarded / ongoing</span>
+    </div>
+
+    <div class="stat-card">
+      <b>15 / 3</b>
+      <span>PG dissertations awarded / ongoing</span>
+    </div>
+
+  </div>
+
+
+  <div class="project-card">
+
+    <span class="project-label">
+      Principal Investigator
+    </span>
+
+    <h3>
+      Community Practices for Knowledge Transfer
+      through the Generations among the Lushai Tribe of Mizoram
+    </h3>
+
+    <p>
+      Mizoram University-funded research project
+      <strong>(completed)</strong>.
+    </p>
+
+  </div>
+
+
+  <p style="margin-top:20px; font-size:.95rem; color:#555;">
+
+    <b style="color:var(--accent);">
+      Ph.D. &amp; Research Supervision
+    </b>
+    — Full list of current and past Ph.D. scholars,
+    with links to their research profiles, is available
+    on the
+    <a href="scholars.html">Scholars page →</a>
+
+  </p>
+
+</section>
+
+
+<!-- =========================================================
+     INTERNATIONAL PRESENTATIONS
+     ========================================================= -->
+
+<section class="international-section">
+
+  <div class="section-heading">
+
+    <div class="section-icon">🌍</div>
+
+    <div>
+      <h2>International Conferences &amp; Presentations</h2>
+
+      <p>
+        International conferences, seminars, symposia and
+        scholarly presentations.
+      </p>
+    </div>
+
+  </div>
+
+
+  <ul class="presentation-list">
+
+
+    <li>
+
+      Kumar Sumit &amp;
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        Beyond Vocabulary: Reclaiming Subject Access
+        for Indigenous and Minority Knowledge Communities
+      </em>
+      —
+
+      IFLA WLIC,
+      Busan, South Korea,
+
+      <span class="presentation-year">
+        August 2026
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      Kumar Sumit &amp;
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        Beyond Publication Growth:
+        Measuring Semantic Maturity in Scholarly Topics
+      </em>
+      —
+
+      SIG MET-STI Symposium,
+      89th ASIS&amp;T Annual Meeting,
+      Bangkok,
+
+      <span class="presentation-year">
+        November 2026
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      Kumar Sumit &amp;
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        Bridging Representation Gaps:
+        Culturally Grounded Retrieval in Indigenous
+        Multilingual OPACs
+      </em>
+      <b>(Poster)</b>
+      —
+
+      89th ASIS&amp;T Annual Meeting,
+      Bangkok,
+
+      <span class="presentation-year">
+        November 2026
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        Library Research Support Service and Academic
+        Excellence in the 21st Century
+      </em>
+      —
+
+      International Seminar on
+      <em>
+        New Era of Social Responsibility,
+        Sustainability and Innovation
+      </em>,
+
+      School of Economics, Management and Information Science
+      (SEMIS), Mizoram University, Aizawl,
+
+      <span class="presentation-year">
+        4–6 March 2024
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        Filling Information Gaps of Prisoners through
+        Prison Libraries: A Review
+      </em>
+      —
+
+      International Seminar on
+      <em>
+        New Era of Social Responsibility,
+        Sustainability and Innovation
+      </em>,
+
+      SEMIS, Mizoram University, Aizawl,
+
+      <span class="presentation-year">
+        4–6 March 2024
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        ICT for Interdisciplinary Education through
+        Library and Information Science under NEP 2020
+      </em>
+      —
+
+      International Seminar on
+      <em>
+        New Era of Social Responsibility,
+        Sustainability and Innovation
+      </em>,
+
+      SEMIS, Mizoram University, Aizawl,
+
+      <span class="presentation-year">
+        4–6 March 2024
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      <strong>Manendra Kumar Singh</strong>.
+
+      <em>
+        Evolution of Research Themes in LIS in India:
+        A Topic Modeling and Bibliometric Approach
+      </em>
+      —
+
+      8th International Conference of Asian Libraries
+      (ICAL-2025),
+
+      <em>
+        Building Smart Libraries:
+        Leveraging AI-Based Technologies
+      </em>,
+
+      Gautam Buddha University,
+      Uttar Pradesh,
+
+      <span class="presentation-year">
+        24–26 April 2025
+      </span>.
+
+    </li>
+
+
+    <li>
+
+      Kumar Sumit,
+      <strong>Manendra Kumar Singh</strong> &amp;
+      P. Buragohain.
+
+      <em>
+        From Keywords to Connections:
+        Concept-Based Discovery in Multilingual Library Catalogues
+      </em>
+      —
+
+      International Conference of Asian Libraries
+      (ICAL-2026),
+
+      <em>
+        Evolving Information Landscape:
+        Making Libraries Future-Ready
+      </em>,
+
+      IIM Kashipur, Uttarakhand,
+
+      <span class="presentation-year">
+        16–18 April 2026
+      </span>.
+
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================================================
+     NATIONAL PRESENTATIONS
+     ========================================================= -->
+
+<section class="national-section">
+
+  <div class="section-heading">
+
+    <div class="section-icon">🇮🇳</div>
+
+    <div>
+      <h2>National Conferences, Seminars &amp; Workshops</h2>
+
+      <p>
+        National-level scholarly presentations and professional
+        workshops.
+      </p>
+    </div>
+
+  </div>
+
+
+  <ul class="presentation-list">
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>Digital India and Library Professionals</em> —
+      National Seminar on
+      <em>
+        Librarianship in 21st Century:
+        Issues &amp; Challenges
+      </em>,
+      Banaras Hindu University, Varanasi,
+      <span class="presentation-year">27 February 2016</span>.
+    </li>
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Role of Digital India Project in Community
+        Information Service
+      </em> —
+      National Conference on
+      <em>
+        Conceptualizing the Social Responsibilities of Libraries
+      </em>,
+      Banaras Hindu University, Varanasi,
+      <span class="presentation-year">19–20 March 2017</span>.
+    </li>
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Use of Open-Source Learning Management System
+        in Indian Public Libraries
+      </em> —
+      Banaras Hindu University, Varanasi,
+      <span class="presentation-year">7–9 November 2017</span>.
+    </li>
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Transforming Libraries through Libsys Automation Software
+      </em> —
+      Two-Day National Workshop,
+      Faculty of Library Science,
+      Mandsaur University, Madhya Pradesh,
+      <span class="presentation-year">15–16 February 2020</span>.
+    </li>
+
+
+    <li>
+      Abhishek Kumar Rai &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Reducing Recidivism: What Prison Libraries Put Forward?
+      </em> —
+      National Seminar on
+      <em>
+        National Education Policy 2020:
+        A Forward-Looking Vision for LIS Education and Services
+      </em>,
+      Department of Library and Information Science,
+      Mizoram University,
+      <span class="presentation-year">1–3 March 2023</span>.
+    </li>
+
+
+    <li>
+      B. Das &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Roadmap for Implementation of NEP 2020 in HEIs of Assam:
+        Issues and Challenges
+      </em> —
+      National Seminar on
+      <em>
+        National Education Policy 2020:
+        A Forward-Looking Vision for LIS Education and Services
+      </em>,
+      Department of Library and Information Science,
+      Mizoram University,
+      <span class="presentation-year">1–3 March 2023</span>.
+    </li>
+
+
+    <li>
+      Anudha Lepcha &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Significance of Research Support Services through
+        Libraries: NEP 2020
+      </em> —
+      National Seminar on
+      <em>
+        National Education Policy 2020:
+        A Forward-Looking Vision for LIS Education and Services
+      </em>,
+      Department of Library and Information Science,
+      Mizoram University,
+      <span class="presentation-year">1–3 March 2023</span>.
+    </li>
+
+
+    <li>
+      Abhishek Kumar Rai &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Prison Library Services in Digital India:
+        A Perspective of Rehabilitation of Inmates
+      </em> —
+      IASLIC 29th National Seminar 2022 on
+      <em>
+        Library and Information Centers in Digital India:
+        Present Scenario and Future Strategies
+      </em>,
+      Central Library, North-Eastern Hill University,
+      <span class="presentation-year">15–17 March 2023</span>.
+    </li>
+
+
+    <li>
+      Anudha Lepcha &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Research on Digital Preservation in India:
+        A Critical Review
+      </em> —
+      IASLIC 29th National Seminar 2022 on
+      <em>
+        Library and Information Centres in Digital India:
+        Present Scenario and Future Strategies
+      </em>,
+      Central Library, North-Eastern Hill University,
+      <span class="presentation-year">15–17 March 2023</span>.
+    </li>
+
+
+    <li>
+      Abhishek Kumar Rai &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Impact of Prison Libraries in the Digital Age:
+        A Forward Vision
+      </em> —
+      National Conference on
+      <em>Knowledge Transaction in Digital Scholarship</em>,
+      Department of Library and Information Science,
+      Banaras Hindu University,
+      <span class="presentation-year">10–11 April 2023</span>.
+    </li>
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Promotion of Library Services:
+        Role of Library Professionals in the Digital Environment
+      </em> —
+      National Conference on
+      <em>Knowledge Transaction in Digital Scholarship</em>,
+      Department of Library and Information Science,
+      Banaras Hindu University,
+      <span class="presentation-year">10–11 April 2023</span>.
+    </li>
+
+
+    <li>
+      Anudha Lepcha &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        The Optimization of Research Support Services through
+        Libraries in Higher Education
+      </em> —
+      National Conference on
+      <em>Knowledge Transaction in Digital Scholarship</em>,
+      Department of Library and Information Science,
+      Banaras Hindu University,
+      <span class="presentation-year">10–11 April 2023</span>.
+    </li>
+
+
+    <li>
+      Abhishek Kumar Rai &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Unlocking Opportunities: The Vital Role of Digital
+        Resources for Incarcerated
+      </em> —
+      National Seminar on
+      <em>
+        Revamping Libraries and Librarianship
+        in Digital Environment
+      </em>,
+      Central Library, Mizoram University,
+      <span class="presentation-year">11–12 May 2023</span>.
+    </li>
+
+
+    <li>
+      Anudha Lepcha &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Assessing the Impact of Research Support Services
+        on Research Productivity and Success
+      </em> —
+      National Seminar on
+      <em>
+        Revamping Libraries and Librarianship
+        in Digital Environment
+      </em>,
+      Central Library, Mizoram University,
+      <span class="presentation-year">11–12 May 2023</span>.
+    </li>
+
+
+    <li>
+      Anudha Lepcha &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Exploring the Role and Significance of User Support
+        Services through Libraries in Enhancing User Experience
+        and Satisfaction
+      </em> —
+      National Seminar on
+      <em>
+        Digitizing Library Services Using Modern Technology
+      </em>,
+      Central Library, Pachhunga University College,
+      Aizawl,
+      <span class="presentation-year">27–28 June 2023</span>.
+    </li>
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Artificial Intelligence and Future of Research
+        Support Service in Libraries
+      </em> —
+      National Seminar on
+      <em>
+        Technological Breakthrough and Libraries:
+        Present and Beyond
+      </em>,
+      ASLIP Conclave 2024,
+      CSIR-Institute of Microbial Technology,
+      <span class="presentation-year">7–8 November 2024</span>.
+    </li>
+
+
+    <li>
+      Bhabnanda Das &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Information Literacy and Access Challenges for
+        NLIST Resources: A Study among Faculties of
+        Provincialized Colleges of Assam
+      </em> —
+      IASLIC 30th National Seminar 2024,
+      Department of Library and Information Science,
+      Aligarh Muslim University, Aligarh,
+      <span class="presentation-year">21–23 November 2024</span>.
+    </li>
+
+
+    <li>
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Information Literacy and Access Challenges for
+        NLIST Resources: A Study among Faculties of
+        Provincial Colleges in Assam
+      </em> —
+      National Seminar on
+      <em>
+        Information Literacy for Developing Enlightened
+        Library/Information User Community in New Age
+      </em>,
+      Department of Library and Information Science,
+      Aligarh Muslim University, in association with
+      IASLIC Centre, Kolkata,
+      <span class="presentation-year">21–23 November 2024</span>.
+    </li>
+
+
+    <li>
+      B. Prince &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Public Libraries as Custodians of Indigenous Knowledge:
+        An Analysis of Preservation Efforts in Mizoram's
+        Public Libraries
+      </em> —
+      International Conference on
+      <em>
+        Viksit Bharat 2047:
+        The Role of Public Libraries in Preserving Indian
+        Knowledge Systems and Integrating NEP 2020
+        into Community Libraries
+      </em>,
+      Rishihood University, Sonipat, Haryana,
+      <span class="presentation-year">3–5 January 2025</span>.
+    </li>
+
+
+    <li>
+      A. Lepcha, P. Buragohain &amp;
+      <strong>Manendra Kumar Singh</strong>.
+      <em>
+        Balancing Tradition and Innovation in a Digital Era:
+        Trends in Research Support Services in Indian
+        Academic Libraries: A Scientometrics Study
+      </em> —
+      National Conference on
+      <em>
+        Reimagining of Libraries:
+        Balancing Tradition and Innovation in a Digital Era
+      </em>,
+      Tata Memorial Hospital &amp;
+      Bombay Science Librarians' Association,
+      <span class="presentation-year">10 January 2025</span>.
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================================================
+     INVITED TALKS
+     ========================================================= -->
+
+<section>
+
+  <div class="section-heading">
+
+    <div class="section-icon">🎙️</div>
+
+    <div>
+      <h2>Invited Talks &amp; Professional Development</h2>
+      <p>Invited lectures, chaired sessions and academic engagement</p>
+    </div>
+
+  </div>
+
+
+  <details class="simple" open>
+
+    <summary>
+      Invited Lectures &amp; Chaired Sessions
+      <span class="summary-toggle">＋</span>
+    </summary>
+
+    <ul>
+
+      <li>
+        <b>Chaired a technical session</b> —
+        National Seminar on
+        <em>
+          Integration Through Cultural Exchange
+        </em>,
+        Department of Mass Communication,
+        Mizoram University,
+        May 2023.
+      </li>
+
+      <li>
+        <b>Invited lecture</b> —
+        <em>
+          "Role of the Public Library for National Integration
+          through Cultural Exchange between North-East Region
+          and rest of the Nation,"
+        </em>
+        same seminar,
+        May 2023.
+      </li>
+
+      <li>
+        <b>Lecture</b> —
+        National Librarian Day,
+        DLIS &amp; Central Library,
+        Mizoram University,
+        August 2023.
+      </li>
+
+      <li>
+        <b>Keynote lecture</b> —
+        <em>
+          "A Theoretical Outlook on DSpace Institutional
+          Repository Software,"
+        </em>
+        National Workshop on Automation and Digitization
+        for Academic and Special Libraries,
+        Govt. Hrangbana College with INFLIBNET,
+        September 2023.
+      </li>
+
+      <li>
+        <b>Chaired a technical session</b> —
+        National Seminar on
+        <em>
+          Empowering Communities, User-Centric Library Services
+          for Advancing SDGs
+        </em>,
+        Mizoram Central Library,
+        March 2025.
+      </li>
+
+      <li>
+        <b>Keynote lecture</b> —
+        <em>
+          "Reimagining Academic Libraries through Artificial
+          Intelligence: Tools, Trends, and Challenges,"
+        </em>
+        Gangadhar Meher University, Odisha,
+        March 2026.
+      </li>
+
+      <li>
+        <b>Lecture</b> —
+        <em>
+          "Research Environment in India and Role of
+          Academic Library,"
+        </em>
+        Central University of South Bihar,
+        March 2026.
+      </li>
+
+    </ul>
+
+  </details>
+
+
+  <!-- PROFESSIONAL TRAININGS -->
+
+  <details class="simple">
+
+    <summary>
+      Professional Trainings &amp; Workshops
+      <span class="summary-toggle">＋</span>
+    </summary>
+
+    <ul>
+
+      <li>
+        National Workshop on Library Automation (KOHA),
+        Content Management (Joomla) &amp; Data Migration —
+        Biju Patnaik Central Library,
+        NIT Rourkela,
+        May 2014.
+      </li>
+
+      <li>
+        Author Workshop —
+        Springer Nature, BHU &amp; IIT (BHU) Varanasi,
+        October 2016.
+      </li>
+
+      <li>
+        Literature Search: Tools &amp; Techniques —
+        National Workshop on Research Methodology,
+        Parshwanath Vidyapeeth, Varanasi,
+        May 2017.
+      </li>
+
+      <li>
+        SAKSHAM-IT Champion Training Program —
+        Microsoft, BHU,
+        December 2017.
+      </li>
+
+      <li>
+        4-Week Induction/Orientation Program for Faculty —
+        Teaching Learning Centre,
+        Ramanujan College,
+        University of Delhi,
+        June–July 2021.
+      </li>
+
+      <li>
+        Refresher Course in Library and Information Science —
+        UGC &amp; HRDC,
+        Mizoram University,
+        October 2022.
+      </li>
+
+      <li>
+        Hands-on Workshop on ICT (FDP) —
+        NIEPA New Delhi with Department of Education,
+        Mizoram University,
+        December 2023.
+      </li>
+
+      <li>
+        DELNET IIT-Delhi Webinar —
+        <em>
+          "CORAL: An Open Source Electronic Resource
+          Management Software,"
+        </em>
+        March 2024.
+      </li>
+
+      <li>
+        DELNET IIT-Delhi Webinar —
+        <em>
+          "Unleashing the Power of Data Analytics:
+          Shaping the Future of an Innovative
+          Research Ecosystem,"
+        </em>
+        March 2024.
+      </li>
+
+      <li>
+        NEP 2020 Orientation &amp; Sensitization Programme
+        (MM-TTP) —
+        Central University of Punjab, Bathinda,
+        August 2024.
+      </li>
+
+      <li>
+        Workshop on Digital Media Text Analysis —
+        DLIS &amp; Department of Mass Communication
+        with DST-TEC,
+        Mizoram University,
+        September 2024.
+      </li>
+
+    </ul>
+
+  </details>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+     ========================================================= -->
+
+<section class="experience-cta">
+
+  <span class="cta-icon">📚</span>
+
+  <h2>Explore the Complete Academic Profile</h2>
+
+  <p>
+    Explore publications, research scholars, research projects,
+    academic achievements and other scholarly activities
+    through the different sections of this academic profile.
+  </p>
+
+  <a href="publications.html">
+    📖 Explore Publications
+  </a>
+
+  <a href="scholars.html"
+     style="margin-left:8px;">
+    👨‍🎓 View Scholars
+  </a>
+
+</section>
+
+
+</div>
 </main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
 <footer id="site-footer" class="site-foot"></footer>
 
+
 <script src="script.js"></script>
+
 </body>
 </html>

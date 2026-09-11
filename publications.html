@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +48,457 @@
     href="style.css"
   >
 
+
+  <!-- =====================================================
+       ENHANCED PUBLICATION ICON STYLES
+  ====================================================== -->
+
+  <style>
+
+    /* =====================================================
+       PUBLICATION STATISTICS
+    ====================================================== */
+
+    .publication-stats .stat {
+      position: relative;
+      text-align: center;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .publication-stats .stat:hover {
+      transform: translateY(-6px);
+    }
+
+
+    /* Large circular statistic icons */
+
+    .publication-stats .stat-icon {
+
+      width: 64px;
+      height: 64px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 2.25rem;
+      line-height: 1;
+
+      margin: 0 auto 12px;
+
+      border-radius: 50%;
+
+      background: rgba(112, 33, 17, 0.08);
+
+      box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08),
+        inset 0 0 0 1px rgba(112, 33, 17, 0.08);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+
+      font-family:
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        sans-serif;
+    }
+
+
+    .publication-stats .stat:hover .stat-icon {
+
+      transform:
+        scale(1.12)
+        rotate(-4deg);
+
+      background:
+        rgba(112, 33, 17, 0.14);
+
+      box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+
+
+    /* =====================================================
+       RESEARCH IMPACT ICONS
+    ====================================================== */
+
+    .impact-item {
+
+      transition:
+        transform 0.3s ease;
+    }
+
+    .impact-item:hover {
+
+      transform:
+        translateY(-4px);
+    }
+
+
+    .impact-item > span {
+
+      width: 52px;
+      height: 52px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.8rem;
+      line-height: 1;
+
+      border-radius: 50%;
+
+      background:
+        rgba(112, 33, 17, 0.08);
+
+      margin-bottom: 8px;
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+
+      font-family:
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        sans-serif;
+    }
+
+
+    .impact-item:hover > span {
+
+      transform:
+        scale(1.12);
+
+      background:
+        rgba(112, 33, 17, 0.14);
+    }
+
+
+
+    /* =====================================================
+       PAGE KICKER
+    ====================================================== */
+
+    .page-kicker {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      font-size: 1.05rem;
+    }
+
+
+
+    /* =====================================================
+       SEARCH ICON
+    ====================================================== */
+
+    .publication-search > span {
+
+      font-size: 1.6rem;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        transform 0.25s ease;
+    }
+
+
+    .publication-search:focus-within > span {
+
+      transform:
+        scale(1.15);
+    }
+
+
+
+    /* =====================================================
+       SECTION LABELS
+    ====================================================== */
+
+    .section-label {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+    }
+
+
+
+    /* =====================================================
+       RESEARCH THEME TAGS
+    ====================================================== */
+
+    .theme-tags span {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .theme-tags span:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.10);
+    }
+
+
+
+    /* =====================================================
+       VIEW MORE BUTTON
+    ====================================================== */
+
+    .pub-toggle summary span {
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 34px;
+      height: 34px;
+
+      font-size: 1.25rem;
+
+      border-radius: 50%;
+
+      background:
+        rgba(112, 33, 17, 0.08);
+
+      transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+    }
+
+
+    .pub-toggle[open] summary span {
+
+      transform:
+        rotate(180deg);
+
+      background:
+        rgba(112, 33, 17, 0.14);
+    }
+
+
+
+    /* =====================================================
+       NEWSPAPER ICON
+    ====================================================== */
+
+    .newspaper-icon {
+
+      width: 90px;
+      height: 90px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      font-size: 3.2rem;
+      line-height: 1;
+
+      border-radius: 20px;
+
+      background:
+        rgba(112, 33, 17, 0.08);
+
+      box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.08);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+      font-family:
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        sans-serif;
+    }
+
+
+    .newspaper-card:hover .newspaper-icon {
+
+      transform:
+        scale(1.08)
+        rotate(-3deg);
+
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.13);
+    }
+
+
+
+    /* =====================================================
+       CTA ICON
+    ====================================================== */
+
+    .cta-icon {
+
+      width: 72px;
+      height: 72px;
+
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      font-size: 2.7rem;
+      line-height: 1;
+
+      border-radius: 18px;
+
+      background:
+        rgba(112, 33, 17, 0.08);
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+      font-family:
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Noto Color Emoji",
+        sans-serif;
+    }
+
+
+    .publication-cta:hover .cta-icon {
+
+      transform:
+        scale(1.08)
+        translateY(-3px);
+
+      box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+
+
+    /* =====================================================
+       DOI LINKS
+    ====================================================== */
+
+    .doi-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 5px;
+
+      transition:
+        transform 0.2s ease;
+    }
+
+
+    .doi-link:hover {
+
+      transform:
+        translateX(4px);
+    }
+
+
+
+    /* =====================================================
+       BUTTON ICON
+    ====================================================== */
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+    }
+
+
+
+    /* =====================================================
+       MOBILE RESPONSIVE
+    ====================================================== */
+
+    @media (max-width: 700px) {
+
+      .publication-stats .stat-icon {
+
+        width: 54px;
+        height: 54px;
+
+        font-size: 2rem;
+      }
+
+
+      .impact-item > span {
+
+        width: 46px;
+        height: 46px;
+
+        font-size: 1.55rem;
+      }
+
+
+      .newspaper-icon {
+
+        width: 70px;
+        height: 70px;
+
+        font-size: 2.6rem;
+      }
+
+
+      .cta-icon {
+
+        width: 60px;
+        height: 60px;
+
+        font-size: 2.3rem;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 
 <body data-page="publications">
@@ -97,6 +546,7 @@
         Science and interdisciplinary research domains.
 
       </p>
+
 
 
       <!-- =====================================================
@@ -182,6 +632,7 @@
       </div>
 
 
+
       <!-- =====================================================
            RESEARCH IMPACT
       ====================================================== -->
@@ -206,6 +657,7 @@
         </div>
 
 
+
         <div class="impact-item">
 
           <span>
@@ -221,6 +673,7 @@
           </small>
 
         </div>
+
 
 
         <div class="impact-item">
@@ -279,6 +732,7 @@
           >
 
         </div>
+
 
 
         <div class="publication-filter">
@@ -349,25 +803,45 @@
 
         <div class="theme-tags">
 
-          <span>🤖 Artificial Intelligence</span>
+          <span>
+            🤖 Artificial Intelligence
+          </span>
 
-          <span>📊 Scientometrics</span>
+          <span>
+            📊 Scientometrics
+          </span>
 
-          <span>📚 Bibliometrics</span>
+          <span>
+            📚 Bibliometrics
+          </span>
 
-          <span>🔎 Information Retrieval</span>
+          <span>
+            🔎 Information Retrieval
+          </span>
 
-          <span>🏛️ Digital Libraries</span>
+          <span>
+            🏛️ Digital Libraries
+          </span>
 
-          <span>🧠 NLP &amp; Text Mining</span>
+          <span>
+            🧠 NLP &amp; Text Mining
+          </span>
 
-          <span>🗺️ Research Mapping</span>
+          <span>
+            🗺️ Research Mapping
+          </span>
 
-          <span>🗂️ Knowledge Organization</span>
+          <span>
+            🗂️ Knowledge Organization
+          </span>
 
-          <span>📈 Research Evaluation</span>
+          <span>
+            📈 Research Evaluation
+          </span>
 
-          <span>💡 Intelligent Library Services</span>
+          <span>
+            💡 Intelligent Library Services
+          </span>
 
         </div>
 
@@ -407,6 +881,7 @@
         </div>
 
 
+
         <article class="pub-card">
 
 
@@ -423,6 +898,7 @@
           </div>
 
 
+
           <h3 class="pub-title">
 
             National Education Policy 2020:
@@ -431,12 +907,16 @@
           </h3>
 
 
+
           <p class="pub-meta">
 
             Pravakar Rath, Amit Kumar &amp;
-            <strong>Manendra Kumar Singh</strong>
+            <strong>
+              Manendra Kumar Singh
+            </strong>
 
           </p>
+
 
 
           <p class="pub-details">
@@ -605,6 +1085,8 @@
           <div class="pub-hidden-list">
 
 
+            <!-- CHAPTER 03 -->
+
             <article class="pub-card">
 
               <div class="pub-card-top">
@@ -626,7 +1108,9 @@
 
               <p class="pub-meta">
                 A. Lepcha &amp;
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -637,6 +1121,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 04 -->
 
             <article class="pub-card">
 
@@ -659,7 +1145,9 @@
 
               <p class="pub-meta">
                 Abhishek Rai &amp;
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -670,6 +1158,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 05 -->
 
             <article class="pub-card">
 
@@ -693,7 +1183,9 @@
 
               <p class="pub-meta">
                 Bhabananda Das &amp;
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -704,6 +1196,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 06 -->
 
             <article class="pub-card">
 
@@ -725,7 +1219,9 @@
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -736,6 +1232,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 07 -->
 
             <article class="pub-card">
 
@@ -759,7 +1257,9 @@
 
               <p class="pub-meta">
                 Lepcha A., P. Buragohain &amp;
-                <strong>Singh M.K.</strong>
+                <strong>
+                  Singh M.K.
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -771,6 +1271,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 08 -->
 
             <article class="pub-card">
 
@@ -794,7 +1296,9 @@
 
               <p class="pub-meta">
                 B. Prince &amp;
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -804,6 +1308,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 09 -->
 
             <article class="pub-card">
 
@@ -825,7 +1331,9 @@
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
               </p>
 
               <p class="pub-details">
@@ -837,6 +1345,8 @@
             </article>
 
 
+
+            <!-- CHAPTER 10 -->
 
             <article class="pub-card">
 
@@ -859,7 +1369,9 @@
               </h3>
 
               <p class="pub-meta">
-                <strong>Singh M.K.</strong>,
+                <strong>
+                  Singh M.K.
+                </strong>,
                 Kumar Sumit &amp;
                 Prince Buragohain
               </p>
@@ -914,9 +1426,7 @@
 
 
 
-        <!-- =================================================
-             2026
-        ================================================== -->
+        <!-- 2026 -->
 
         <div class="publication-year-heading">
 
@@ -958,7 +1468,9 @@
           <p class="pub-meta">
 
             Kumar Sumit, Prince Buragohain &amp;
-            <strong>Manendra Kumar Singh</strong>
+            <strong>
+              Manendra Kumar Singh
+            </strong>
 
           </p>
 
@@ -1014,14 +1526,18 @@
 
             Prince Buragohain, Kumar Sumit, Piyush Tripathi,
             Anudha Lepcha &amp;
-            <strong>Manendra Kumar Singh</strong>
+            <strong>
+              Manendra Kumar Singh
+            </strong>
 
           </p>
 
 
           <p class="pub-details">
 
-            Continuity &amp; Resilience Review, pp. 1–21, https://doi.org/10.1108/CRR-12-2025-0063.
+            Continuity &amp; Resilience Review,
+            pp. 1–21,
+            DOI: 10.1108/CRR-12-2025-0063.
 
           </p>
 
@@ -1066,7 +1582,9 @@
           <p class="pub-details">
 
             COLLNET Journal of Scientometrics and
-            Information Management, pp. 1–26, DOI : 10.47974/CJSIM-2025-12001.
+            Information Management,
+            pp. 1–26,
+            DOI: 10.47974/CJSIM-2025-12001.
 
           </p>
 
@@ -1074,9 +1592,7 @@
 
 
 
-        <!-- =================================================
-             EARLIER ARTICLES
-        ================================================== -->
+        <!-- EARLIER ARTICLES -->
 
         <details class="pub-toggle">
 
@@ -1098,8 +1614,13 @@
             <!-- 2016 -->
 
             <div class="publication-year-heading">
-              <span>2016</span>
+
+              <span>
+                2016
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1122,13 +1643,19 @@
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Aditya Tripathi
+
               </p>
 
               <p class="pub-details">
+
                 SRELS Journal of Information Management,
                 53(6), 439–446.
+
               </p>
 
             </article>
@@ -1138,8 +1665,13 @@
             <!-- 2017 -->
 
             <div class="publication-year-heading">
-              <span>2017</span>
+
+              <span>
+                2017
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1158,17 +1690,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Authorship Pattern and Collaboration Coefficient
                 of India in Biotechnology Research during
                 2001–2016: Based on Scopus Database
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Library Philosophy and Practice, 1549.
+
+                Library Philosophy and Practice,
+                1549.
+
               </p>
 
             </article>
@@ -1189,16 +1730,25 @@
               </div>
 
               <h3 class="pub-title">
+
                 Need an Ideal Act for Public Library
                 Development in India
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Knowledge Librarian, 4(4), 1–10.
+
+                Knowledge Librarian,
+                4(4), 1–10.
+
               </p>
 
             </article>
@@ -1219,21 +1769,29 @@
               </div>
 
               <h3 class="pub-title">
+
                 Impact of Digital India Program
                 on Public Library Professionals
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
+
                 International Journal of Next Generation
-                Library and Technologies, 3(3).
+                Library and Technologies,
+                3(3).
+
               </p>
 
             </article>
-
 
 
             <article class="pub-card">
@@ -1251,21 +1809,29 @@
               </div>
 
               <h3 class="pub-title">
+
                 Authorship and Collaboration Pattern
                 in Biotechnology Research:
                 A Study of IBSA Countries
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Library Philosophy and Practice, 1607.
+
+                Library Philosophy and Practice,
+                1607.
+
               </p>
 
             </article>
-
 
 
             <article class="pub-card">
@@ -1283,20 +1849,28 @@
               </div>
 
               <h3 class="pub-title">
+
                 An Outlook of Future Library
                 and Library Professionals
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Printing Area, 34(5), 73–79.
+
+                Printing Area,
+                34(5), 73–79.
+
               </p>
 
             </article>
-
 
 
             <article class="pub-card">
@@ -1314,15 +1888,24 @@
               </div>
 
               <h3 class="pub-title">
+
                 Impact of e-Resources on Public Libraries
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Vidyavarta, 20(4), 45–51.
+
+                Vidyavarta,
+                20(4), 45–51.
+
               </p>
 
             </article>
@@ -1332,8 +1915,13 @@
             <!-- 2018 -->
 
             <div class="publication-year-heading">
-              <span>2018</span>
+
+              <span>
+                2018
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1352,17 +1940,25 @@
               </div>
 
               <h3 class="pub-title">
+
                 Re-Engineering Public Libraries of Varanasi
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Aditya Tripathi
+
               </p>
 
               <p class="pub-details">
+
                 SRELS Journal of Information Management,
                 55(1), 51–57.
+
               </p>
 
             </article>
@@ -1383,17 +1979,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Top 10 Indian Academic/Research Organizations:
                 A Scientometrics Analysis of Research in Biotechnology
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Aditya Tripathi
+
               </p>
 
               <p class="pub-details">
-                Library Philosophy and Practice, 1607.
+
+                Library Philosophy and Practice,
+                1607.
+
               </p>
 
             </article>
@@ -1403,8 +2008,13 @@
             <!-- 2022 -->
 
             <div class="publication-year-heading">
-              <span>2022</span>
+
+              <span>
+                2022
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1423,17 +2033,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Scholarly Efforts of Indian Space Research
                 Organization during 2002–2021:
                 Mapping and Visualization
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Library Waves, 8(1).
+
+                Library Waves,
+                8(1).
+
               </p>
 
             </article>
@@ -1443,8 +2062,13 @@
             <!-- 2023 -->
 
             <div class="publication-year-heading">
-              <span>2023</span>
+
+              <span>
+                2023
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1463,18 +2087,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Plant Physiology Research in India,
                 Japan, and Germany during 2001–2020:
                 A Scientometrics Study
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
+
                 Journal of Advancements in Library Sciences,
                 9(3), 28–39.
+
               </p>
 
             </article>
@@ -1484,8 +2116,13 @@
             <!-- 2024 -->
 
             <div class="publication-year-heading">
-              <span>2024</span>
+
+              <span>
+                2024
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1504,19 +2141,28 @@
               </div>
 
               <h3 class="pub-title">
+
                 Beneficiary Correlation on NLIST Services
                 in Colleges of Assam:
                 A Nationwide Assessment
+
               </h3>
 
               <p class="pub-meta">
+
                 B. Das &amp;
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
+
                 DESIDOC Journal of Library &amp;
-                Information Technology, 44(6), 418–424.
+                Information Technology,
+                44(6), 418–424.
+
               </p>
 
             </article>
@@ -1537,18 +2183,27 @@
               </div>
 
               <h3 class="pub-title">
+
                 Library Website as an Indicator of Academic Excellence:
                 A Web Analysis of the Leading IITs in India
+
               </h3>
 
               <p class="pub-meta">
+
                 Abhishek Rai,
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Anudha Lepcha
+
               </p>
 
               <p class="pub-details">
-                Library Philosophy and Practice, 8086, 1–20.
+
+                Library Philosophy and Practice,
+                8086, 1–20.
+
               </p>
 
             </article>
@@ -1569,19 +2224,28 @@
               </div>
 
               <h3 class="pub-title">
+
                 Evaluating Uttar Pradesh Prison Library
                 Services' Compliance with IFLA Guidelines
+
               </h3>
 
               <p class="pub-meta">
+
                 Abhishek Rai,
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Anudha Lepcha
+
               </p>
 
               <p class="pub-details">
+
                 IFLA Journal.
+
               </p>
+
 
               <a
                 class="doi-link"
@@ -1599,8 +2263,13 @@
             <!-- 2025 -->
 
             <div class="publication-year-heading">
-              <span>2025</span>
+
+              <span>
+                2025
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1619,16 +2288,25 @@
               </div>
 
               <h3 class="pub-title">
+
                 Uncovering Future Directions in Virtual Reference
                 Service: A Bibliometric and Topic Modeling Analysis
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
-                Digital Library Perspectives, 41(2).
+
+                Digital Library Perspectives,
+                41(2).
+
               </p>
 
             </article>
@@ -1649,17 +2327,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Mapping the Indian Landscape of Nanodrug Delivery
                 for Cancer Treatment: A Bibliometric Analysis
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
+
                 COLLNET Journal of Scientometrics and
-                Information Management, 18(2), 155–178.
+                Information Management,
+                18(2), 155–178.
+
               </p>
 
             </article>
@@ -1680,17 +2367,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Trends and Trajectories in India's Social Policy
                 Research: A Computational Review
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Singh M.K.</strong>
+
+                <strong>
+                  Singh M.K.
+                </strong>
+
               </p>
 
               <p class="pub-details">
+
                 International Journal of Sociology and Social Policy.
+
               </p>
+
 
               <a
                 class="doi-link"
@@ -1719,18 +2415,25 @@
               </div>
 
               <h3 class="pub-title">
+
                 Global Trends and Future Prospects in Research
                 Support Services: A Scientometrics Study on
                 the Role of Artificial Intelligence
+
               </h3>
 
               <p class="pub-meta">
+
                 Anudha Lepcha, MK Singh, Prince &amp; Abhishek
+
               </p>
 
               <p class="pub-details">
+
                 DESIDOC Journal of Library &amp;
-                Information Technology, 45(4), 251–258.
+                Information Technology,
+                45(4), 251–258.
+
               </p>
 
             </article>
@@ -1740,8 +2443,13 @@
             <!-- 2026 ADDITIONAL -->
 
             <div class="publication-year-heading">
-              <span>2026</span>
+
+              <span>
+                2026
+              </span>
+
               <div></div>
+
             </div>
 
 
@@ -1760,19 +2468,28 @@
               </div>
 
               <h3 class="pub-title">
+
                 Evaluating AI Adoption in Academic Research:
                 Assessing Usage, Impact, Challenges and Future
                 Perspectives among Research Scholars of Tezpur University
+
               </h3>
 
               <p class="pub-meta">
+
                 Prince Buragohain, Anudha Lepcha &amp;
-                <strong>Manendra Kumar Singh</strong>
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
+
               </p>
 
               <p class="pub-details">
+
                 DESIDOC Journal of Library &amp;
-                Information Technology, 46(1), 3–10.
+                Information Technology,
+                46(1), 3–10.
+
               </p>
 
             </article>
@@ -1793,18 +2510,27 @@
               </div>
 
               <h3 class="pub-title">
+
                 Advancing Information Retrieval:
                 A Bibliometric and Topic Modeling Perspective
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Kunjan Prasad Gupta
+
               </p>
 
               <p class="pub-details">
+
                 Information Discovery and Delivery.
+
               </p>
+
 
               <a
                 class="doi-link"
@@ -1833,17 +2559,26 @@
               </div>
 
               <h3 class="pub-title">
+
                 Exploring Emerging Frontiers in Global Assistive
                 Technology Research: A Computational Analysis
+
               </h3>
 
               <p class="pub-meta">
-                <strong>Manendra Kumar Singh</strong>
+
+                <strong>
+                  Manendra Kumar Singh
+                </strong>
                 &amp; Syed Shaz Hussain
+
               </p>
 
               <p class="pub-details">
-                Library Waves, 12(1).
+
+                Library Waves,
+                12(1).
+
               </p>
 
             </article>
@@ -1886,17 +2621,23 @@
         </div>
 
 
+
         <article class="pub-card newspaper-card">
+
 
           <div class="newspaper-icon">
             📰
           </div>
 
+
           <div>
 
             <h3 class="pub-title">
+
               Newspaper &amp; Magazine Contributions
+
             </h3>
+
 
             <p class="pub-details">
 
@@ -1906,6 +2647,7 @@
 
             </p>
 
+
             <p class="pub-note">
 
               Full bibliographic details are available in the
@@ -1914,6 +2656,7 @@
             </p>
 
           </div>
+
 
         </article>
 
@@ -1935,20 +2678,25 @@
             📥
           </span>
 
+
           <div>
 
             <p class="section-label">
               Complete Academic Record
             </p>
 
+
             <h2>
               Looking for the complete publication list?
             </h2>
 
+
             <p>
+
               Download the latest academic CV for the complete
               publication record, research projects, awards,
               academic experience, and other scholarly activities.
+
             </p>
 
           </div>
@@ -1985,10 +2733,14 @@
 
 
   <!-- =====================================================
-       PUBLICATION SEARCH SCRIPT
+       PUBLICATION SEARCH + FILTER SCRIPT
   ====================================================== -->
 
   <script>
+
+    /* =====================================================
+       SEARCH
+    ====================================================== */
 
     const searchInput =
       document.getElementById("publicationSearch");
@@ -1999,31 +2751,38 @@
 
     if (searchInput) {
 
-      searchInput.addEventListener("input", function () {
+      searchInput.addEventListener(
+        "input",
+        function () {
 
-        const searchTerm =
-          this.value.toLowerCase().trim();
-
-
-        publicationCards.forEach(function (card) {
-
-          const text =
-            card.textContent.toLowerCase();
+          const searchTerm =
+            this.value.toLowerCase().trim();
 
 
-          if (text.includes(searchTerm)) {
+          publicationCards.forEach(
+            function (card) {
 
-            card.style.display = "";
+              const text =
+                card.textContent.toLowerCase();
 
-          } else {
 
-            card.style.display = "none";
+              if (
+                text.includes(searchTerm)
+              ) {
 
-          }
+                card.style.display = "";
 
-        });
+              } else {
 
-      });
+                card.style.display = "none";
+
+              }
+
+            }
+          );
+
+        }
+      );
 
     }
 
@@ -2037,63 +2796,123 @@
       document.querySelectorAll(".filter-btn");
 
 
-    filterButtons.forEach(function (button) {
+    filterButtons.forEach(
+      function (button) {
 
-      button.addEventListener("click", function () {
-
-
-        filterButtons.forEach(function (btn) {
-
-          btn.classList.remove("active");
-
-        });
+        button.addEventListener(
+          "click",
+          function () {
 
 
-        this.classList.add("active");
+            /* Remove active state */
+
+            filterButtons.forEach(
+              function (btn) {
+
+                btn.classList.remove(
+                  "active"
+                );
+
+              }
+            );
 
 
-        const selectedYear =
-          this.dataset.filter;
+            /* Add active state */
+
+            this.classList.add(
+              "active"
+            );
 
 
-        publicationCards.forEach(function (card) {
-
-          const year =
-            card.querySelector(".publication-year");
+            const selectedYear =
+              this.dataset.filter;
 
 
-          if (!year) return;
+            publicationCards.forEach(
+              function (card) {
+
+                const year =
+                  card.querySelector(
+                    ".publication-year"
+                  );
 
 
-          const yearText =
-            year.textContent.trim();
+                if (!year) return;
 
 
-          if (
-            selectedYear === "all" ||
-            yearText === selectedYear
-          ) {
+                const yearText =
+                  year.textContent.trim();
 
-            card.style.display = "";
 
-          } else {
+                /*
+                  All = show everything
+                  Earlier = show anything before 2024
+                */
 
-            card.style.display = "none";
+                if (
+                  selectedYear === "all"
+                ) {
+
+                  card.style.display = "";
+
+                }
+
+                else if (
+                  selectedYear === "older"
+                ) {
+
+                  const numericYear =
+                    parseInt(yearText);
+
+
+                  if (
+                    numericYear < 2024
+                  ) {
+
+                    card.style.display = "";
+
+                  } else {
+
+                    card.style.display = "none";
+
+                  }
+
+                }
+
+                else if (
+                  yearText === selectedYear
+                ) {
+
+                  card.style.display = "";
+
+                }
+
+                else {
+
+                  card.style.display = "none";
+
+                }
+
+              }
+            );
 
           }
+        );
 
-        });
-
-      });
-
-    });
+      }
+    );
 
   </script>
 
 
+
+  <!-- =====================================================
+       MAIN SITE SCRIPT
+  ====================================================== -->
+
   <script src="script.js"></script>
+
 
 </body>
 
 </html>
-```
